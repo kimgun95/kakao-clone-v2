@@ -1,0 +1,21 @@
+.status-bar {
+  /* 시계와 아이콘간의 간격(즉 status-bar__column간의 간격)을 flex를 통해 조정 */
+  display: flex;
+  justify-content: space-between;
+
+  /* status-bar와 아래 header간의 간격을 주기 위해 margin을 설정 */
+  margin-bottom: 30px;
+
+  /* 색의 연함을 조정 */
+  opacity: 0.7;
+}
+
+/* status-bar의 아이콘 사이즈 조정 */
+.status-bar i {
+  font-size: 14px;
+}
+
+/* status-bar__battery-full옆에 margin을 주기 위해 설정 */
+.status-bar .status-bar__battery-full {
+  margin-left: 5px;
+}

@@ -11,6 +11,7 @@
     />
     <!-- fontawesome에서 폰트 스타일을 import해줌, css파일을 import한 것 -->
     <!-- css파일을 열어보게 되면 여러 클래스가 선언되어 있음 -->
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Friends | Kakao Clone</title>
   </head>
   <body>
@@ -49,7 +50,7 @@
     <!-- 카카오톡의 제일 윗 부분(헤더) -->
     <main class="friends">
       <header class="friends__header">
-        <div class="friends__friend friend friend--lg">
+        <div class="friends__friend friend">
           <div class="friend__column">
             <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
             <div class="friend__content">
@@ -62,7 +63,6 @@
             </div>
           </div>
         </div>
-        <!-- 프로필 사진이 좀 더 크다는 의미로 클래스 명에 friend--lg를 추가함 -->
       </header>
       <!-- 나의 프로필 -->
       <div class="friends__plus">
@@ -71,7 +71,7 @@
         </h5>
         <div class="friends__friend friend">
           <div class="friend__column">
-            <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
+            <img src="images/avatar.jpg" class="friend__avatar" />
             <div class="friend__content">
               <span class="friend__name">
                 plus friend
@@ -85,15 +85,15 @@
         <h5 class="friends__title">
           Friends 14
         </h5>
-        <li class="friends__friend friend">
+        <li class="friends__friend friend friend--lg">
           <div class="friend__column">
-            <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
+            <img src="images/avatar.jpg" class="friend__avatar" />
             <div class="friend__content">
               <span class="friend__name">
-                친구 이름
+                Park Sang Hyeon
               </span>
               <span class="friend__status">
-                나는 슬프다
+                I'm so sad.
               </span>
             </div>
           </div>

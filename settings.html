@@ -11,6 +11,7 @@
     />
     <!-- fontawesome에서 폰트 스타일을 import해줌, css파일을 import한 것 -->
     <!-- css파일을 열어보게 되면 여러 클래스가 선언되어 있음 -->
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Settings | Kakao Clone</title>
   </head>
   <body>
@@ -34,7 +35,7 @@
     <header class="header">
       <div class="header__header-column">
         <a href="more.html" class="header__back-btn">
-          <i class="fas fa-arrow-left fa-2x"></i>
+          <i class="fas fa-arrow-left"></i>
         </a>
         <!-- back 버튼을 클릭시 more.html로 넘어가는 것을 구현. html에서는 back page로 이동하는 것이 불가 -->
         <h1 class="header__title">Settings</h1>
@@ -46,7 +47,29 @@
       </div>
     </header>
     <main class="settings">
-      <section class="sesttings__section">
+      <section class="settings__section">
+        <ul class="settings__list">
+          <li class="settings__setting">
+            <span class="settings__icon">
+              <i class="fas fa-lock"></i>
+            </span>
+            <span class="settings__title">Privacy</span>
+          </li>
+          <li class="settings__setting">
+            <span class="settings__icon">
+              <i class="far fa-bell"></i>
+            </span>
+            <span class="settings__title">Notifications</span>
+          </li>
+          <li class="settings__setting">
+            <span class="settings__icon">
+              <i class="far fa-user"></i>
+            </span>
+            <span class="settings__title">Friends</span>
+          </li>
+        </ul>
+      </section>
+      <section class="settings__section">
         <ul class="settings__list">
           <li class="settings__setting">
             <span class="settings__icon">

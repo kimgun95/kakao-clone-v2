@@ -1,0 +1,129 @@
+/* 채팅화면에 배경화면을 넣어줌, vh는 viewport height를 의미(보여지는 screen의 높이) */
+.chat-screen {
+  background-image: url("../images/background.png");
+  min-height: 100vh;
+}
+
+/* 우선 chat.html의 body에 class이름을 넣어주었고 chat전체 padding을 초기화함 */
+.chats-body {
+  padding: 10px 0px;
+}
+
+/* padding을 초기화했기 때문에 다시 .status-bar와 header의 padding을 설정 */
+.chats-body .status-bar {
+  padding: 0px 10px;
+  padding-top: 10px;
+}
+.chats-body .header {
+  padding: 0px 10px;
+}
+
+.chat__write {
+  /* 포지션 설정 */
+  position: fixed;
+  bottom: 50px;
+  width: 80%;
+  /* 디스플레이 설정 */
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  border-radius: 40px;
+  justify-content: space-between;
+  background-color: #fcfcfc;
+  /* 수평값, 수직값, blur값 색깔(모름,모름,모름,opacity값) */
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.chat__write i {
+  font-size: 22px;
+}
+
+/* input의 크기를 넓히기 위한 설정 */
+.chat__write-column:nth-child(2) {
+  width: 80%;
+}
+
+.chat__write-column input {
+  padding: 20px 10px;
+  width: 100%;
+  /* 박스에 있던 선을 없앰 */
+  border: none;
+  font-size: 14px;
+}
+
+/* 박스 클릭시 생기는 아웃라인을 없앰 */
+.chat__write-column input:focus {
+  outline: none;
+}
+
+/* chat-screen안에서 가장 큰 chat__messages부분을 설정 */
+.chat-screen .chat__messages {
+  padding: 0px 20px;
+  padding-top: 30px;
+  border-top: 1px solid #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 타임 스탬프 설정 */
+.chat__messages .chat__timestamp {
+  background-color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
+    rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+  font-weight: 700;
+}
+
+/* 메시지 박스 설정 */
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+/* 오는 메시지 박스 설정 */
+.incoming-message {
+  align-self: flex-start;
+}
+
+/* 보내는 메시지 박스 설정 */
+.sent-message {
+  align-self: flex-end;
+}
+
+/* 메시지 박스에서 컨텐트의 비중 */
+.message .message__content {
+  width: 80%;
+}
+
+/* 오는 메시지의 상대방 이미지 설정 */
+.incoming-message img {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin-right: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
+    rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+}
+
+/* 컨텐트 안 bubble을 설정 */
+.message .message__bubble {
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
+    rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+}

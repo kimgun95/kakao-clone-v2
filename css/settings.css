@@ -1,0 +1,24 @@
+.settings .settings__section {
+  border-top: 1px solid #f7f7f7;
+  padding: 30px 0px;
+}
+
+.settings__setting .settings__icon {
+  font-size: 20px;
+  margin-right: 20px;
+}
+/* 
+글씨 굵기를 줄이기 위해 weight을 300으로 설정. 
+style.css에도 300을 추가해줌 */
+.settings__setting .settings__title {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.settings .settings__setting {
+  margin-bottom: 30px;
+}
+/* 위에서 마진 바텀을 30으로 설정하였는데 여기서 마지막 박스는 0으로 따로 설정해 주기 위해 사용함 */
+.settings .settings__setting:last-child {
+  margin-bottom: 0px;
+}

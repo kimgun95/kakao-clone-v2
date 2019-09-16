@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* 헤더에 있는 타이틀 */
+.header .header__title {
+  font-size: 24px;
+  /* import한 font의 굵기를 사용해야함 */
+  font-weight: 600;
+}
+
+/* 헤더에 있는 아이콘 */
+.header .header__icon {
+  font-size: 20px;
+  margin-left: 20px;
+  /* 아이콘에 커서를 올려두면 포인터 모양으로 바뀜 */
+  cursor: pointer;
+}
+
+/* header__header-column들을 가운데로 정렬 */
+.header .header__header-column {
+  display: flex;
+  align-items: center;
+}
+
+/* chat과 setting에 있는 back-btn에 대한 설정 */
+.header .header__back-btn {
+  font-size: 22px;
+  margin-right: 20px;
+}

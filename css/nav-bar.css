@@ -1,0 +1,49 @@
+/* nav를 fixed 포지션을 통해 고정 */
+.nav {
+  position: fixed;
+  width: 100%;
+  background-color: #fcfcfc;
+  /* 패딩은 상하, 좌우로 설정 */
+  padding: 20px 50px;
+  left: 0px;
+  bottom: 0px;
+  /* 눈에 잘 보이지 않는 가느다란 border선도 설정 */
+  border-top: 1px solid #f7f7f7;
+}
+
+/* nav list들을 flex를 통해 가로 배열로 반들어 주고 space between을 통해 정리 */
+.nav .nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 아이콘의 font size 설정 */
+.nav i {
+  font-size: 20px;
+}
+
+/* nav__badge에 대해 부모 box라는 것을 정의하기 위해 relative 포지션 설정 */
+.nav .nav__list-link {
+  position: relative;
+}
+
+/* absolute 포지션을 통해 부모에 대한 자식 box임을 인지 */
+.nav .nav__badge {
+  position: absolute;
+
+  /* 박스를 우측, 좌측 위로 옮기기 위함 */
+  top: -7px;
+  right: -7px;
+
+  font-size: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 18px;
+  height: 18px;
+  background-color: #dc5d46;
+  /* 모서리를 둥글게 만드는 개념. height의 절반을 주거나 50%로 설정 */
+  border-radius: 50%;
+}
