@@ -63,9 +63,11 @@
   border-radius: 40px;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  /* 애니메이션을 적용하기 위한 설정 */
+  animation: float 3s linear infinite forwards;
 }
 
-/* input을 icon앞에 둔 이유이다. 아래 transition효과를 사용하기 위해선 이런 설정이 필요 */
+/* sibling selector (~)를 사용하기 위해선 input뒤에 div나 i가 와야 한다. 아래 transition효과를 사용하기 위해선 이런 설정이 필요 */
 .chat__write:focus ~ .chat__icon {
   opacity: 0;
 }
@@ -73,6 +75,22 @@
 .chat__icon {
   font-size: 18px;
   transition: opacity 0.3s ease-in-out;
+}
+
+/* input박스에 애니메이션을 더해줌 */
+@keyframes float {
+  0% {
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
+  50% {
+    box-shadow: 0 13px 27px -60px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
+  100% {
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
 }
 
 /* 아이콘의 절대적인 위치를 잡아줌 */
@@ -129,11 +147,35 @@
 /* 오는 메시지 박스 설정 */
 .incoming-message {
   align-self: flex-start;
+  animation: incomingAnim 0.5s ease-out forwards;
 }
 
+/* incoming, sent message에 애니메이션을 추가 */
+@keyframes incomingAnim {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 /* 보내는 메시지 박스 설정 */
 .sent-message {
   align-self: flex-end;
+  animation: sentAnim 0.5s ease-out forwards;
+}
+
+@keyframes sentAnim {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* 메시지 박스에서 컨텐트의 비중 */
