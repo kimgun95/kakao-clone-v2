@@ -1,6 +1,7 @@
 /* 맨 위 status-bar와 header를 고정 */
 .header-wrapper {
   position: fixed;
+  z-index: 2;
   top: 0px;
   width: 100%;
   padding: 5px 0px;
@@ -192,6 +193,17 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
     rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+  animation: spin 1s linear forwards;
+}
+
+/* 채팅방에서 상대방 이미지가 한바퀴 회전하는 잡(?)기술 */
+@keyframes spin {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateY(1turn);
+  }
 }
 
 /* 컨텐트 안 bubble을 설정 */

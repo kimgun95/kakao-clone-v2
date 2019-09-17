@@ -34,3 +34,19 @@ a {
   /* 링크가 걸린 텍스트에 밑줄이 있는 경우가 있는데 이것을 없앰 */
   text-decoration: none;
 }
+
+/* 모든 main부분에 애니메이션을 설정 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+main {
+  animation: fadeIn 0.5s ease-in-out;
+}
