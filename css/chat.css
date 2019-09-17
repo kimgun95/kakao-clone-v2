@@ -1,12 +1,21 @@
-/* 채팅화면에 배경화면을 넣어줌, vh는 viewport height를 의미(보여지는 screen의 높이) */
-.chat-screen {
-  background-image: url("../images/background.png");
-  min-height: 100vh;
+/* 맨 위 status-bar와 header를 고정 */
+.header-wrapper {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 5px 0px;
+  background-color: white;
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.3);
 }
 
 /* 우선 chat.html의 body에 class이름을 넣어주었고 chat전체 padding을 초기화함 */
+/* 채팅화면에 배경화면을 넣어줌, vh는 viewport height를 의미(보여지는 screen의 높이) */
 .chats-body {
   padding: 10px 0px;
+  /* 전체적으로 아래로 100px내린 느낌을 줌 */
+  padding-top: 100px;
+  background-image: url("../images/background.png");
+  min-height: 1000vh;
 }
 
 /* padding을 초기화했기 때문에 다시 .status-bar와 header의 padding을 설정 */
