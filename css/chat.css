@@ -27,11 +27,11 @@
   padding: 0px 10px;
 }
 
-.chat__write {
+.chat__write-container {
   /* 포지션 설정 */
   position: fixed;
-  bottom: 50px;
-  width: 80%;
+  bottom: 0px;
+
   /* 디스플레이 설정 */
   display: flex;
   align-items: center;
@@ -39,12 +39,47 @@
   margin: 0 auto;
   left: 0;
   right: 0;
-  border-radius: 40px;
+
   justify-content: space-between;
   background-color: #fcfcfc;
   /* 수평값, 수직값, blur값 색깔(모름,모름,모름,opacity값) */
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+/* input에 대한 설정 */
+.chat__write {
+  bottom: 0px;
+  width: 100%;
+  border-radius: 0;
+  padding: 20px 60px;
+  border: none;
+  font-size: 14px;
+}
+
+/* 박스 클릭시 생기는 아웃라인을 없앰 */
+.chat__write:focus {
+  outline: none;
+}
+
+/* input을 icon앞에 둔 이유이다. 아래 transition효과를 사용하기 위해선 이런 설정이 필요 */
+.chat__write:focus ~ .chat__icon {
+  opacity: 0;
+}
+/* 위에 설정된 focus에 의한 opacity로 transition이 발생 */
+.chat__icon {
+  font-size: 18px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* 아이콘의 절대적인 위치를 잡아줌 */
+.chat__icon-left {
+  position: absolute;
+}
+
+.chat__icon-right {
+  position: absolute;
+  right: 10px;
 }
 
 .chat__write i {
@@ -62,11 +97,6 @@
   /* 박스에 있던 선을 없앰 */
   border: none;
   font-size: 14px;
-}
-
-/* 박스 클릭시 생기는 아웃라인을 없앰 */
-.chat__write-column input:focus {
-  outline: none;
 }
 
 /* chat-screen안에서 가장 큰 chat__messages부분을 설정 */
