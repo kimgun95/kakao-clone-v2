@@ -1,0 +1,27 @@
+/* 모바일이 아닌 pc에서 큰화면으로 볼때 경고문 */
+.bigScreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fce006;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0px 20px;
+  display: none;
+  z-index: 4;
+}
+
+/* media query를 이용한 것 */
+@media screen and (min-width: 550px) {
+  .bigScreen {
+    display: flex;
+  }
+}
