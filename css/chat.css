@@ -88,7 +88,7 @@
 .message {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* 오는 메시지 박스 설정 */
@@ -103,7 +103,7 @@
 
 /* 메시지 박스에서 컨텐트의 비중 */
 .message .message__content {
-  width: 80%;
+  width: 100%;
 }
 
 /* 오는 메시지의 상대방 이미지 설정 */
@@ -111,7 +111,7 @@
   width: 30px;
   height: 30px;
   border-radius: 15px;
-  margin-right: 10px;
+  margin-right: 15px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
     rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
@@ -126,4 +126,23 @@
   padding: 10px 15px;
   border-radius: 20px;
   font-size: 13px;
+  color: white;
+  font-weight: 500;
+}
+
+.incoming-message .message__author {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.incoming-message .message__bubble {
+  border-top-left-radius: 0px;
+  background-image: linear-gradient(to right, #6190e8, #a7bfe8);
+}
+
+.sent-message .message__bubble {
+  border-top-right-radius: 0px;
+  background-image: linear-gradient(to left, #ffafbd, #ffc3a0);
 }
