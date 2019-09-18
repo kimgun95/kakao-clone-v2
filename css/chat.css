@@ -235,3 +235,7 @@
   border-top-right-radius: 0px;
   background-image: linear-gradient(to left, #ffafbd, #ffc3a0);
 }
+
+.chats__chat {
+  margin-bottom: 20px;
+}
